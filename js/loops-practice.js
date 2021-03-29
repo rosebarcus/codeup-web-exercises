@@ -48,5 +48,5 @@ while(userInput !== "STOP") {
         totalCost = totalCost + priceOfItem;
         alert("Your total is " + totalCost.toFixed(2));
     }
-
+1
 }
