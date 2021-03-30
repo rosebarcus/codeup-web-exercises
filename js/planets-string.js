@@ -1,6 +1,6 @@
 (function(){
     "use strict";
-
+console.log("Hello, Neptune!");
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
 
     /**
@@ -9,7 +9,7 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    var planetsArray = planetsString.split(",");
+    var planetsArray = planetsString.split("|");
 
     console.log(planetsArray);
 
@@ -28,6 +28,17 @@
     console.log(stringWithBreakTags)
 
     //This could be useful when we begin to use CSS and HTML more.
-var unoderedList = planetsString
+    var unoderedList = planetsString
+    console.log(stringWithBreakTags);
+    console.log(planetsArray);
 
-})();
+
+    var planetsList = "<ul>";
+
+    planetsArray.forEach(functions(planet)) {
+        planetsList += "<li>" + planet + "</li>";
+        })
+        planetsList += "</ul>";
+
+    console.log(planetsList);
+    })();
