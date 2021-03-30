@@ -1,13 +1,7 @@
 "use strict";
-function showMuliplicationTable() {
-    for (var i = 1; i <= 10; i * i++) {
-        console.log(i * i);
-    }
-}
-
 var num = 7;
 
-console.log(num + " * 1 = " + num * 1);
+console.log(num + " * 1 = " + num);
 console.log(num + " * 2 = " + num * 2);
 console.log(num + " * 3 = " + num * 3);
 
@@ -20,8 +14,8 @@ for (var multiplier = 1; multiplier <=10; multiplier++) {
 }
 
 
-for(var i = 0; i <10; i++)
-    var random = Math.floor(Math.random() * 181) +20);
+for(var i = 0; i <10; i++) {
+    var random = Math.floor(Math.random() * 181) + 20
     if(random % 2 === 0){
     console.log(random + " is even.");
     } else {
@@ -33,8 +27,8 @@ for(var i = 0; i <10; i++)
 
 
 
-this is work you did in the breakout room, unable to get the desired result from the for loops exercise identifying
- odd and even numbers.
+/*this is work you did in the breakout room, unable to get the desired result from the for loops exercise identifying
+ odd and even numbers.*/
 
 function randomNum (min, max) {
    min = Math.ceil(min);
