@@ -12,6 +12,12 @@ console.log("hello, Rose!");
      *  > console.log(person.lastName) // "Sanchez"
      */
 
+var person = {
+    firstName: "Rose",
+    lastName: "Barcus",
+        sayHello: function("Hello from " + this.firstName + " " + this.Lastname),
+}
+
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -21,6 +27,9 @@ console.log("hello, Rose!");
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+person.sayHello = function (){
+    console.log("Hello from " + firstName + lastName);
+};
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +45,37 @@ console.log("hello, Rose!");
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+/*    shoppers.forEach(function(shopper) {
+        var shopperName = shopper.name;
+        var amounSpent = "$" + shopper.amount.toFixed(2);
+        var discount = 0;
+        if(shopper.amount <= 200) {
+            discount = shopper.amount * .12;
+        }
+        var amountAfterDiscount = shopper.amount - discount;
+        amountAfterDiscount = "$" + discount.toFixed(2);
+        discount = "$" + discount + " The amount after discount is " + amountAfterDiscount;
+        var message = shopperName + " spent " + amounSpent + " Their discount is " + discount;
+        console.log(message)
+    });*/
+
+    function hebOffer(input){
+        if(input.amount>200){
+            return "You get a 12% discount! Your new total is $" + (input.amount - (input.amount * .12)).toFixed(2);
+        } else {
+            return "Sorry, you don't qualify for a discount.";
+        }
+    }
+    shoppers.forEach(function (shopper) {
+        console.log(shopper.name + " needs to pay $" + shopper.amount.toFixed(2) + " for their groceries." + hebOffer(shopper));
+    });
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -54,7 +89,43 @@ console.log("hello, Rose!");
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+var books = [
+        {
+            title: "The Salmon of Doubt",
+            author: {
+                firstName: "Douglas",
+                lastName: "Adams"
+            }
+        },
+        {
+            title: "Walkaway",
+            author: {
+                firstName: "Cory",
+                lastName: "Doctorow"
+            }
+        },
+        {
+            title: "A Brief History of Time",
+            author: {
+                firstName: "Stephen",
+                lastName: "Hawking"
+            }
+        },
+        {
+            title: "Gideon the Ninth"
+            author: {
+                firstName: "Tamysn",
+                lastName: "Muir"
+            }
+        },
+        {
+            title: "Harrow the Ninth"
+            author: {
+                firstName: "Tamysn",
+                lastName: "Muir"
+            }
+        }
+    ]
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -79,7 +150,12 @@ console.log("hello, Rose!");
      *      ---
      *      ...
      */
-
+books.forEach(function(books, index) {
+    var bookNumber = index + 1;
+    console.log("Book # " + bookNumber);
+    console.log("Title: " + book.title);
+    console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+});
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -90,5 +166,25 @@ console.log("hello, Rose!");
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+    function createBook(title, author) {
+        var nameArray = author.split(" ");
+        var firstName = nameArray(0);
+        var lastName - nameArray (1);
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+books.push(createBook("A book title", Rose Barcus));
+
+    for (var i = 0; i < books.length: i++){
+        bookNumber = i + 1;
+    }
 
 })();
