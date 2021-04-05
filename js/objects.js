@@ -15,7 +15,7 @@ console.log("hello, Rose!");
 var person = {
     firstName: "Rose",
     lastName: "Barcus",
-        sayHello: function("Hello from " + this.firstName + " " + this.Lastname),
+        sayHello: function("Hello from ") + this.firstName + this.Lastname
 }
 
     /**
