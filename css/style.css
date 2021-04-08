@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    background-color: darkgray;
 }
 
 h1 {
@@ -7,14 +8,14 @@ h1 {
 }
 
 h2, h3 {
-    color: darkgreen;
+    color: darkorchid;
 }
 
 aside, em {
     font-family: serif;
 }
 
-.bottom-border {
+h1, .bottom-border {
     bottom-border: 1px solid black;
 
 }
