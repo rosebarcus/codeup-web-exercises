@@ -1,21 +1,64 @@
+@font-face {
+    font-family: "Oswald"
+    src: url(https://fonts.googleapis.com/css2?family=Oswald&display=swap);
+    font-weight: auto;
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url(https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap);
+    font-weight: bold;
+}
+
+header {
+    color: darkslateblue;
+    text-align: center;
+    text-decoration: underline;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: darkgray;
+    font-family: Oswald, sans-serif;
+    background-color: lightblue;
+    background-image: url(../img/bluebackground.jpeg);
+    background-repeat: repeat;
+    background-position: left;
 }
 
 h1 {
-    color: purple;
+    color: darkslateblue;
+    text-decoration: underline;
 }
 
 h2, h3 {
     color: darkorchid;
 }
 
+ul {
+    list-style-type: square;
+}
+
 aside, em {
     font-family: serif;
+}
+
+td, tr {
+    font-size: 20px;
+    padding: 30px;
 }
 
 h1, .bottom-border {
     bottom-border: 1px solid black;
 
+}
+
+a: link {
+    color: darkgreen;
+}
+
+a: visited {
+    color: rebeccapurple;
+}
+
+a: hover {
+    color: darkturquoise;
 }
