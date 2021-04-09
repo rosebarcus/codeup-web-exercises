@@ -62,3 +62,7 @@ a: visited {
 a: hover {
     color: darkturquoise;
 }
+
+image {
+    padding: 50px;
+}
