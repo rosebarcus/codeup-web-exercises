@@ -51,21 +51,30 @@ for (var i = 0; i < names.length; i++) {
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-function first(arr){
-    return arr[0];
+
+    var colors = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+    function first(colors){
+    return colors[0];
     }
 
-    console.log(first(["red", "orange", "yellow", "green", "blue", "violet"]))
+    function second(arr) {
+        return arr[1];
+    }
 
-function second(arr) {
-    return arr[1];
+
+function three(colors) {
+    return colors[5];
 }
 
-console.log(second("The second element is ",["red", "orange", "yellow", "green", "blue", "violet"]));
+console.log(three(colors));
+
+
+console.log(second(colors));
 
 function last (arr) {
-    return arr [5];
+    return colors[colors.length -1];
 }
 
-console.log(last(["red", "orange", "yellow", "green", "blue", "violet"]));
+console.log(last(colors));
 })();
