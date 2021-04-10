@@ -15,7 +15,9 @@ console.log("hello, Rose!");
 var person = {
     firstName: "Rose",
     lastName: "Barcus",
-        sayHello: function("Hello from ") + this.firstName + this.Lastname
+        sayHello () {
+        return "Hello, from " + this.firstName + this.lastName;
+        }
 }
 
     /**
@@ -112,14 +114,14 @@ var books = [
             }
         },
         {
-            title: "Gideon the Ninth"
+            title: "Gideon the Ninth",
             author: {
                 firstName: "Tamysn",
                 lastName: "Muir"
             }
         },
         {
-            title: "Harrow the Ninth"
+            title: "Harrow the Ninth",
             author: {
                 firstName: "Tamysn",
                 lastName: "Muir"
@@ -150,12 +152,13 @@ var books = [
      *      ---
      *      ...
      */
-books.forEach(function(books, index) {
+books.forEach(function(book, index) {
     var bookNumber = index + 1;
     console.log("Book # " + bookNumber);
     console.log("Title: " + book.title);
     console.log("Author: " + book.author.firstName + " " + book.author.lastName)
 });
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -170,21 +173,27 @@ books.forEach(function(books, index) {
 
     function createBook(title, author) {
         var nameArray = author.split(" ");
-        var firstName = nameArray(0);
-        var lastName - nameArray (1);
-        return {
+        var firstName = nameArray[0];
+        var lastName = nameArray [1];
+        books.push({
             title: title,
             author: {
                 firstName: firstName,
                 lastName: lastName
             }
-        }
+        });
     }
 
-books.push(createBook("A book title", Rose Barcus));
+createBook('A book title', 'firstName lastName');
 
-    for (var i = 0; i < books.length: i++){
+    function showBookInfo(book) {
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+    }
+    showBookInfo(books[5]);
+
+  /*  for (var i = 0; i < books.length; i++){
         bookNumber = i + 1;
     }
-
+*/
 })();
