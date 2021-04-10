@@ -21,9 +21,9 @@
 
     console.log('Adding "The Sun" to the beginning of the planets array.');
     //this modifies the array.
-    planets.unshift("The Sun");
+    planets.unshift("Sun");
     // this returns the length of the modified array,
-    console.log("What does this log?". planets.unshift("The Sun"));
+   /* console.log("What does this log?" + planets.unshift("Sun"));*/
     console.log(planets);
 
 
