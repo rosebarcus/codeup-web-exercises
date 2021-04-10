@@ -28,16 +28,20 @@ console.log("Hello, Neptune!");
     console.log(stringWithBreakTags)
 
     //This could be useful when we begin to use CSS and HTML more.
-    var unoderedList = planetsString
+    // var unoderedList = planetsString
     console.log(stringWithBreakTags);
     console.log(planetsArray);
 
 
     var planetsList = "<ul>";
 
-    planetsArray.forEach(functions(planet)) {
+    planetsArray.forEach(function(planet){
         planetsList += "<li>" + planet + "</li>";
-        })
+        });
+
+/*shapes.forEach(function(shape) {
+    console.log('Here is a lovely shape: ' + shape + '.');
+});*/
         planetsList += "</ul>";
 
     console.log(planetsList);
