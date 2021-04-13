@@ -35,13 +35,14 @@ h2, h3 {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    flex-basis: auto;
-    flex-warp: nowrap;
+    justify-content: space-around;
+   /* flex-basis: auto;
+    flex-wrap: nowrap;*/
 }
 
 section {
     display: flex;
-    margin: 1em 0;
+    /*margin: 1em 0;*/
 }
 
 section:nth-of-type(1) {
@@ -50,6 +51,7 @@ section:nth-of-type(1) {
     align-items: center;
     place-content: stretch space-between;
 }
+
 section:nth-of-type(1) div:last-child {
     align-self: flex-start;
 }
@@ -58,7 +60,6 @@ section:nth-of-type(1) div:last-child {
     background: fuchsia;
     width: 3em;
     height: 1em;
-    place-content: stretch space-between;
 }
 
 .purple-box:nth-of-type(1) {
@@ -96,7 +97,7 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 .large-brown-box:nth-of-type(2) {
@@ -117,13 +118,16 @@ section:nth-of-type(5) {
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
-    /* enter needed declarations here */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .grey-box {
     background: grey;
     width: 3em;
     height: 3em;
+    padding: 1.5em;
 }
 
 .grey-box:nth-of-type(odd) {
