@@ -72,7 +72,7 @@ a {
 }
 
 .profile-entry {
-    margin: 1em;
+    margin: .5em;
 }
 
 .profile-items {
@@ -100,7 +100,9 @@ a {
     padding: .5em;
     background-color: var(--light-bg);
     border-bottom: 1px solid var(--separator-color);
-    overflow: auto;
+    /*overflow: auto;*/
+    display: flow-root;
+    /*correct solution is display flow-root, which means the content will flow around the children properties*/
 }
 
 .media-image {
