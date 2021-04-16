@@ -1,0 +1,21 @@
+.bg-pizza {
+    background-image: url("../img/pizza.png");
+
+}
+
+ .container{
+     background: rgba(255, 255, 255, 0.7);
+
+ }
+
+ h1 {
+     text-align: center;
+ }
+
+ h2 {
+     padding-left: 8px;
+ }
+
+ .bg-button {
+     background: #848487;
+ }
