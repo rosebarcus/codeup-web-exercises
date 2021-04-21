@@ -105,18 +105,18 @@ alert(analyzeColor(userInput));
 
 function calculateTotal (luckyNumber,totalAmount){
     if (luckyNumber === 1){
-        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 10% discount. Your total is: " +(totalAmount - (totalAmount *.1)):
+        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 10% discount. Your total is: " +(totalAmount - (totalAmount *.1));
     } else if (luckyNumber === 2){
-        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 25% discount. Your total is: " +(totalAmount - (totalAmount *.25)):
+        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 25% discount. Your total is: " +(totalAmount - (totalAmount *.25));
     } else if (luckyNumber === 3){
-        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 35% discount. Your total is: " +(totalAmount - (totalAmount *.35)):
+        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 35% discount. Your total is: " +(totalAmount - (totalAmount *.35));
     } else if (luckyNumber === 4) {
-        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 50% discount. Your total is: " +(totalAmount - (totalAmount *.5)):
+        return "Hey! Your lucky number is " + luckyNumber + ", you qualify for a 50% discount. Your total is: " +(totalAmount - (totalAmount *.5));
     } else if (luckyNumber === 5){
         return "Congratulations, your lucky number is " + luckyNumber + ", your purchase is free!";
     } else {
         return {
-            "Sorry, you didn't qualify for a discount. Your total is: " + totalAmount + ".";
+            "Sorry, you didn't qualify for a discount. Your total is: ": + totalAmount + ".",
         }
 
     }
@@ -208,6 +208,6 @@ if (participate){
         alert(isNegativeOrPositive(numberEntry));
         alert(plus100(numberEntry));
     } else {
-        alert("Okay, bye.");
+        return alert("Okay, bye.");
     }
 }
