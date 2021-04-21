@@ -9,7 +9,7 @@
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
  function sayHello(name){
-     return = "Hello " + name;
+     return "Hello " + name;
 }
 
 console.log(sayHello ("Rose"));
@@ -83,7 +83,7 @@ var calculateTip = function (tip, bill) {
     return tip * bill
 }
 
-var tip1 = calculateTip(.20, 200;)
+var tip1 = calculateTip(.20, 200);
 console.log("Your calculated tip was:$" + tip1.toFixed(2));
 /**
  * TODO:
@@ -96,7 +96,9 @@ var tipPercentage  = parseFloat(prompt("What percentage would you like to tip? (
 
 var tipAmount = calculateTip(tipPercentage, bill);
 var total = bill +tipAmount;
-alert("Your bill came out to $" + bill.toFixed(2) + ". You decided to tip a generous" (tipPercentage * 100) + "%, which will result in the $" +tipAmount.toFixed(2) + "to be added to your final total for the evening, your cheque is $" + total.toFixed(2) + ".)";
+alert("Your bill came out to $" + bill.toFixed(2) + ". You decided to tip a generous" + (tipPercentage * 100) + "%," +
+    " which will result in the $" + tipAmount.toFixed(2) + "to be added to your final total for the evening, your" +
+    " cheque is $" + total.toFixed(2) + ".)";
 
 function applyDiscount(originalPrice, markDownPercentage) {
     var priceAfterDiscount = originalPrice - (originalPrice * markDownPercentage);

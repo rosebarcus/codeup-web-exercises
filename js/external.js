@@ -22,7 +22,7 @@ var rentalTotal = (lilMerDays + broBearDays + hercDays) * rentalRate;
 
 alert("Your total is: $" + rentalTotal.toFixed(2) + " Have a dandy day!");
 
-part 3.2
+//part 3.2
 
 var googleRate = parseFloat(prompt("how much does Google pay per hour?"));
 var googleHours = parseFloat(prompt("how many hours did you work for google?"));
@@ -50,6 +50,6 @@ var isOfferValid = confirm("Are we running that promo on Beef Jerky?");
 var memberIsPremium = confirm("Does the customer have their Costco Card?");
 var amountBought = parseFloat(prompt("How Beef Jerky Sticks are they buying?"));
 
-aleart("Customer qualifies for promoL " + (((memberIsPremium || amountBought >= 2) && isOfferValid) && amountBought >= 1ls) + ".");
+alert("Customer qualifies for promoL " + (((memberIsPremium || amountBought >= 2) && isOfferValid) && amountBought >= 1) + ".");
 
 
