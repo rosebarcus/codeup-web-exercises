@@ -1,0 +1,17 @@
+@media (min-width: 576px) {
+
+}
+
+.container {
+    list-style-type: none;
+}
+
+h3 {
+    color: #3B94D9;
+}
+
+hr {
+    background-color: limegreen;
+    text-decoration: 4px limegreen;
+
+}
