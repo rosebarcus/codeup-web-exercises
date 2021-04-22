@@ -43,3 +43,28 @@ submitButton.onclick = function() {
     }
     colorInput.value = "";
 }
+var theHulk = document.getElementById("theHulk");
+var hulkState = theHulk.getAttribute("data-state");
+var hulkStrength = theHulk.getAttribute("data-strength");
+var hulkIntelligence = theHulk.getAttribute("data-intelligence");
+alert("The Hulk is currently in " + hulkState + "state. His strength is " + hulkStrength + " and his intelligence is" +
+    " " + hulkIntelligence);
+    var transformButton = document.getElementById("transformHulk");
+    transformButton.onclick = function () {
+    var hulkState = theHulk.getAttribute("data-state");
+    if(hulkState === "The Hulk") {
+        theHulk.setAttribute("data-state", "Bruce Banner")
+    } else {
+        theHulk.setAttribute("data-state", 'The Hulk');
+    }
+    var hulkStrength = theHulk.getAttribute("data-strength");
+    if(hulkState=== "super") {
+        theHulk.setAttribute("data-strength", "normal")
+    } else {
+        theHulk.setAttribute("data-state", 'The Hulk');
+    }
+
+}
+
+// I got lost at the end and stopped following along in intelliJ, this is not the complete lecture that can be found
+// on neptune web exercises
