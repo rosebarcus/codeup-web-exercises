@@ -24,7 +24,10 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
-
+<button id="mainTitleChange">Change the Title</button>
+<button id="subTitleChange">Change the Sub-Title</button>
+<button id="listColorChange">Change the List Color</button>
+<button id="contentChange"> Change the content</button>
 <script>
     (function() {
         "use strict";
@@ -32,13 +35,17 @@
         var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "Javascript is so Cool"
+        var titleChange = function() {
+            mainHeader.innerHTML = "Javascript is so Cool"
+        };
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+        function subHeaderChange () {
+            subHeader.style.color = 'blue';
+        }
 
         // TODO: Uncomment the next line and get all list items
         var listItems = document.getElementsByTagName('li');
@@ -49,7 +56,8 @@
         }
 
         // TODO: Set text color on every other list item to grey
-        for (var i = 0; i <listItems.length; i++) {
+        // If we are redefining the function in the addEventListener method, we need to comment out the code so that the change doesn't happen on page load
+     /*   for (var i = 0; i <listItems.length; i++) {
             if (listItems[i].getAttribute('data-dbid') === '1'){
                 listItems[i].style.color = 'blue';
                 continue;
@@ -57,7 +65,7 @@
             if (i % 2 !== 0) {
                 listItems[i].style.color = 'grey';
             }
-        }
+        }*/
 
 
         // TODO: Set text color of li with dbid = 1 to blue
@@ -67,9 +75,37 @@
         var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = "Mission Accomplished";
+        /*subParagraphs[0].innerHTML = "Mission Accomplished";*/
+// DOM EVENTS
+
+        //Using functions we defined above to pass as the callback function in the addEventListener method
+        document.querySelector("#mainTitleChange").addEventListener("click", titleChange);
+        document.querySelector("#subTitleChange").addEventListener("click", subHeaderChange);
+        // Defining the function within the addEventListener method
+        document.querySelector("#listColorChange").addEventListener("click", function() {
+            for (var i = 0; i <listItems.length; i++) {
+                if (listItems[i].getAttribute('data-dbid') === '1'){
+                    listItems[i].style.color = 'blue';
+                    continue;
+                }
+                if (i % 2 !== 0) {
+                    listItems[i].style.color = 'grey';
+                }
+            }
+
+            document.getElementById("contentChange").addEventListener("click", function() {
+                subParagraphs[0].innerHTML = "Mission Accomplished";
+            });
+        });
+
     })();
+
+
+
 </script>
-<script src="js/dom-query.js"></script>
+
+
+
+<!--<script src="js/dom-query.js"></script>-->
 </body>
 </html>
