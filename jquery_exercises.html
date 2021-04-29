@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JQuery Exercises</title>
+    <title>jQuery Exercises</title>
+    <style>
+        /*.benefits{
+            color: hotpink;
+        }*/
+    </style>
 </head>
-<body>
-<script src="js/jquery-3.6.0.js"></script>
+<body id="codeup">
+<h1 id="Header">Reasons to Microchip Your Pet</h1>
+
+<p>A microchip is a tiny device which contains an ID number that can be registered with your contact information. A
+    microchip can be scanned to obtain this information, so if your pet ever goes missing the rescuers can get in
+    touch with you! It is imperative if you choose to microchip your animal, you MUST register their microchips and
+    keep your contact information current.</p>
+<div class="codeup">
+    <h1>Why is it important to microchip your pet?</h1>
+    <ul>
+        <li class="benefits">Microchipped pets are as much as 50% more likely to be returned to their owners than those
+            without a
+            microchip</li>
+        <li class="benefits">It is an ID that cannot be tampered with</li>
+        <li class="benefits">Your pet cannot lose it like a collar with tags</li>
+        <li class="benefits">Your personal information is private</li>
+        <li class="benefits">It is an almost painless procedure for your pet</li>
+        <li class="benefits">Less than 2 percent of lost cats that enter animal shelters are reunited with their
+            families</li>
+    </ul>
+</div>
+<div class="codeup">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi asperiores deserunt dolorem doloremque error explicabo ipsam iusto laboriosam magni officiis, perspiciatis quia similique temporibus vitae! Culpa eos facilis id.</p>
+</div>
+<div class="codeup">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aspernatur deleniti dicta dignissimos dolore eaque fugiat impedit in ipsa itaque nam, nulla, odio officiis omnis porro quo repudiandae tenetur voluptas.</p>
+</div>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="js/my-custom-javascript.js"></script>
+<script>
+    $(document).ready(function(){
+        var theDiv = $("#Header").html()
+    });
+    /*$('.benefits').css('background-color', 'grey');*/
+    /*$('#header').alert( 'Thanks for caring about your pet!');
+    $(".benefits").css( "border", "solid red 1px");*/
+    /*$('.benefits').css('border', '1px solid red');*/
+    $("#li").css( "font-size", "200px");
+        $("h1, p, li").css("background-color", "palegoldenrod");
+var theHeadersContent = $("h1").html();
+alert(theHeadersContent);
+var theBenefits = $("li").each(function(){
+    alert($("li").html());
+});
+
+alert(theBenefits);
+</script>
 </body>
 </html>
