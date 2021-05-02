@@ -1,10 +1,14 @@
 "use strict";
 
-console.log("Hello, Rose. Get your ish together...");
+console.log("Hey, Rose. Get some keyboard time in!");
 
-function isOdd (input){
-    input !== 2;
-    return true
-} else {
-    return false
+function isOdd (number) {
+    if( number % 2 === 1)
+        return "Yup, " + number + " is pretty odd alright."
+}
+
+console.log(isOdd(123));
+
+function isEven (number) {
+    number
 }
