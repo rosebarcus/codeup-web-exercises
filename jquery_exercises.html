@@ -42,20 +42,20 @@
 <script>
 
     $('h1').click(function() {
-        $(this).css('color', 'red')
+        $(this).css('background-color', 'red')
     })
 
     $('#intro').dblclick(function(){
+        //$(this).css('font-size', '18px') is a simpler way than what you did below.
         var currentSize = parseFloat($(this).css('font-size'));
         console.log(currentSize);
         var increaseSize = (currentSize)
-        $(this).css('font-size', '18px')
+        $(this).css('font-size', '18px');
     })
 
     $('li').hover(function () {
         $(this).css('color', 'red');
-    },
-        function () {
+    }, function () {
     $(this).css('color', 'black')
 })
 
