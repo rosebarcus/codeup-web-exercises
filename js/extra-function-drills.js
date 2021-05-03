@@ -2,13 +2,13 @@
 
 console.log("Hey, Rose. Get some keyboard time in!");
 
-function isOdd (number) {
-    if( number % 2 === 1)
-        return "Yup, " + number + " is pretty odd alright."
+var number = 7;
+function isOdd(number) {
+    if (number % 2 === 0) {
+        return ("The number is even");
+    } else {
+        return "The number is odd"
+    }
 }
 
-console.log(isOdd(123));
-
-function isEven (number) {
-    number
-}
+console.log(isOdd(number));
