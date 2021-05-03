@@ -12,7 +12,8 @@
 <body id="codeup">
 <h1 id="Header">Reasons to Microchip Your Pet</h1>
 
-<p>A microchip is a tiny device which contains an ID number that can be registered with your contact information. A
+<p id="intro">A microchip is a tiny device which contains an ID number that can be registered with your contact
+    information. A
     microchip can be scanned to obtain this information, so if your pet ever goes missing the rescuers can get in
     touch with you! It is imperative if you choose to microchip your animal, you MUST register their microchips and
     keep your contact information current.</p>
@@ -40,32 +41,24 @@
 <script src="js/my-custom-javascript.js"></script>
 <script>
 
-    $(document).ready(function () {
-        var theDiv = $("#Header").html()
-        alert(theDiv);
-    });
+    $('h1').click(function() {
+        $(this).css('color', 'red')
+    })
 
-    $("ul").css("background-color", "black");
-    $(".benefits").css("border", "solid purple 5px");
-    $("li").css("font-size", "55px");
-    $("li").css("border", "white 3px");
-    $("li").css("color", "white");
-    $("h1").css("font-size", "150px");
+    $('#intro').dblclick(function(){
+        var currentSize = parseFloat($(this).css('font-size'));
+        console.log(currentSize);
+        var increaseSize = (currentSize)
+        $(this).css('font-size', '18px')
+    })
 
-  /*  $(document).ready(function(){
-        var theDiv = $("#Header").html()
-    });
-    $('.benefits').css('background-color', 'grey');
-    $('#header').alert( 'Thanks for caring about your pet!');
-    $(".benefits").css( "border", "solid red 1px");
-    $('.benefits').css('border', '1px solid red');
-    $("#li").css( "font-size", "200px");
-        $("h1, p, li").css("background-color", "palegoldenrod");*/
-var theHeadersContent = $("h1").html();
-alert(theHeadersContent);
-var theBenefits = $("li").each(function(){
-    alert($("li").html());
-});
+    $('li').hover(function () {
+        $(this).css('color', 'red');
+    },
+        function () {
+    $(this).css('color', 'black')
+})
+
 
 </script>
 </body>
