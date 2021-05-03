@@ -31,5 +31,24 @@ function identity(input) {
     }
 }
 
+function isFive(input) {
+    if (typeof input === "number" && input === 5)
+        return "Yup, that's the number 5"
+    else {
+        return "hmmm, that is not the number 5";
+    }
+}
 
+
+console.log(isFive(3));
+
+function addFive(input) {
+    if (typeof input === "number")
+        return "You entered " + input + " here it is, but I added five: " + (input + 5)
+    else {
+        return "Not sure what you're trying to do there, bud.";
+    }
+}
+
+console.log(addFive("Hey"));
 
