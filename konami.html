@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Konami Code</title>
-  <!--<style>
-    body {
-      background-image: url("img/tomb-background.jpeg");
-    }
-  </style>-->
+    <link rel="stylesheet" href="css/konami-exercise.css">
 </head>
 <body>
-<h1 id="hidden">Konami Code</h1>
-
+<h1 id="hidden">Can you make it past the wards?</h1>
+<img class="easter-egg" src="img/space.jpeg"  style="display: none" alt="An image of outerspace">
+<img class="easter-egg" src="img/Ninth_House_Icon.jpeg" style="display: none" alt="An image of the Ninth House icon">
 <script src="js/jquery-2.2.4.js"></script>
 <script>
   "use strict";
-
+//refactor this now that you understand how the array works!
   $(document).keyup(function(event){
       console.log(event.keyCode);
   });
@@ -27,10 +24,12 @@
       if(input.length < konamiCode.length) {
           input.push(event.keyCode);
           console.log(input);
-      } if(input.join() === konamiCode.join()) {
-          alert('You gained 30 lives!')
+      } if(input.join(',') === konamiCode.join(',')) {
+          alert("You've gained 30 lives!");
+          $('.easter-egg').css('display', 'block');
+
       }
-  })
+  });
 
 
 
