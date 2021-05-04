@@ -1,0 +1,31 @@
+* {
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+.highlight {
+    color: goldenrod;
+}
+dt, button {
+    background-color: #6261b2;
+    border-radius: 50px;
+    border: 5px;
+    border-color: #b4d455;
+    color: #cbffcd;
+    font-weight: bold;
+}
+
+dd {
+    background-color: #b4d455;
+    color: #6261b2;
+    border-radius: 50px;
+}
+
+h1 {
+    color: #6261b2;
+}

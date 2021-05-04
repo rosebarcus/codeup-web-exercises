@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10 FAQ about National Parks</title>
+  <link rel="stylesheet" href="css/jquery_faq.css">
+</head>
+<body>
+<h1>10 Frequently Asked Questions about National Parks</h1>
+
+<button id="toggle">Click Here for Facts!</button>
+
+<dl>
+  <dt>The National Park Service</dt>
+  <dd class="invisible">Protects over 84 million acres of wild landscapes and historic sites.</dd>
+
+  <dt>Yellowstone National Park</dt>
+  <dd class="invisible">...is the oldest U.S. national park, founded in 1872.</dd>
+
+  <dt>Yosemite National Park</dt>
+  <dd class="invisible">Has 3 of the 10 highest waterfalls in the world!</dd>
+
+  <dt>Ribbon Falls in Yosemite National Park</dt>
+  <dd class="invisible">...is nine times taller than Niagra Falls!</dd>
+
+  <dt>The Grand Canyon in Arizona</dt>
+  <dd class="invisible">...is considered one of the Seven Wonders of the World!</dd>
+
+  <dt>The Most Visited National Park is....</dt>
+  <dd class="invisible">Great Smoky Mountains National Park, with more than 9 million guests per year.</dd>
+
+  <dt>Wind Cave National Park in South Dakota</dt>
+  <dd class="invisible">... is the first cave to be named a national park in the world!</dd>
+
+  <dt>Bears have not killed a single person....</dt>
+  <dd class="invisible">... in Olympic National Park, but a mountain goal has!</dd>
+
+  <dt>The National Park Service</dt>
+  <dd class="invisible">... employs around 20,000 people!</dd>
+
+  <dt>The Deepest Lake in the US...</dt>
+  <dd class="invisible">... is Crater Lake National park with a depth of 1932 feet!</dd>
+
+</dl>
+
+<a href="https://www.outdoorproject.com/articles/59-fun-facts-about-our-national-parks"> source for facts!</a>
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+
+  $('#toggle').click(function () {
+    $('dd').toggleClass('invisible');
+
+  });
+
+  $('dt').click(function () {
+    $(this).css('background-color', 'goldenrod');
+    /* $(this).addClass('.highlight');
+   $(this).toggleClass('highlight');*/
+  });
+</script>
+</body>
+
+</html>
