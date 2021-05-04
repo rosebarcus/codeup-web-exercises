@@ -11,7 +11,7 @@
 .highlight {
     color: goldenrod;
 }
-dt, button {
+dt, button, #last-fact {
     background-color: #6261b2;
     border-radius: 50px;
     border: 5px;
@@ -26,6 +26,6 @@ dd {
     border-radius: 50px;
 }
 
-h1 {
+h1, h3 {
     color: #6261b2;
 }

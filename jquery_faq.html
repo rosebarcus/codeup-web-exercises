@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>10 FAQ about National Parks</title>
-  <link rel="stylesheet" href="css/jquery_faq.css">
+    <link rel="stylesheet" href="css/jquery_faq.css">
 </head>
 <body>
 <h1>10 Frequently Asked Questions about National Parks</h1>
@@ -11,52 +11,109 @@
 <button id="toggle">Click Here for Facts!</button>
 
 <dl>
-  <dt>The National Park Service</dt>
-  <dd class="invisible">Protects over 84 million acres of wild landscapes and historic sites.</dd>
+    <dt>The National Park Service</dt>
+    <dd class="invisible">Protects over 84 million acres of wild landscapes and historic sites.</dd>
 
-  <dt>Yellowstone National Park</dt>
-  <dd class="invisible">...is the oldest U.S. national park, founded in 1872.</dd>
+    <dt>Yellowstone National Park</dt>
+    <dd class="invisible">...is the oldest U.S. national park, founded in 1872.</dd>
 
-  <dt>Yosemite National Park</dt>
-  <dd class="invisible">Has 3 of the 10 highest waterfalls in the world!</dd>
+    <dt>Yosemite National Park</dt>
+    <dd class="invisible">Has 3 of the 10 highest waterfalls in the world!</dd>
 
-  <dt>Ribbon Falls in Yosemite National Park</dt>
-  <dd class="invisible">...is nine times taller than Niagra Falls!</dd>
+    <dt>Ribbon Falls in Yosemite National Park</dt>
+    <dd class="invisible">...is nine times taller than Niagra Falls!</dd>
 
-  <dt>The Grand Canyon in Arizona</dt>
-  <dd class="invisible">...is considered one of the Seven Wonders of the World!</dd>
+    <dt>The Grand Canyon in Arizona</dt>
+    <dd class="invisible">...is considered one of the Seven Wonders of the World!</dd>
 
-  <dt>The Most Visited National Park is....</dt>
-  <dd class="invisible">Great Smoky Mountains National Park, with more than 9 million guests per year.</dd>
+    <dt>The Most Visited National Park is....</dt>
+    <dd class="invisible">Great Smoky Mountains National Park, with more than 9 million guests per year.</dd>
 
-  <dt>Wind Cave National Park in South Dakota</dt>
-  <dd class="invisible">... is the first cave to be named a national park in the world!</dd>
+    <dt>Wind Cave National Park in South Dakota</dt>
+    <dd class="invisible">... is the first cave to be named a national park in the world!</dd>
 
-  <dt>Bears have not killed a single person....</dt>
-  <dd class="invisible">... in Olympic National Park, but a mountain goal has!</dd>
+    <dt>Bears have not killed a single person....</dt>
+    <dd class="invisible">... in Olympic National Park, but a mountain goal has!</dd>
 
-  <dt>The National Park Service</dt>
-  <dd class="invisible">... employs around 20,000 people!</dd>
+    <dt>The National Park Service</dt>
+    <dd class="invisible">... employs around 20,000 people!</dd>
 
-  <dt>The Deepest Lake in the US...</dt>
-  <dd class="invisible">... is Crater Lake National park with a depth of 1932 feet!</dd>
+    <dt>The Deepest Lake in the US...</dt>
+    <dd class="invisible">... is Crater Lake National park with a depth of 1932 feet!</dd>
 
 </dl>
+
+<button id="last-fact">Highlighted Facts!</button>
+
+<h3>Muir Woods National Monument</h3>
+<ul>
+    <li>The tallest redwood in Muir Woods National Monument is 258 feet tall. Redwoods can grow as tall as 380 feet.
+    </li>
+    <li>Muir Woods National Monument is considered to be one of the most popular tourist attractions in the San
+        Francisco Bay Area. More than 750,000 people visited the site in 2005 alone.
+    </li>
+    <li>Congressman William Kent and his wife bought 611 acres of redwoods and mountains to protect the forest. It came
+        down to a legal battle in 1907 when a water company wanted to flood the land. Kent donated 295 acres of redwoods
+        to the government which stopped the court battle.
+    </li>
+    <li>Cathedral Grove is the first permanent quiet zone in the national park system. Visitors are asked to walk
+        quietly, turn off cellphones and just listen to the forest.
+    </li>
+</ul>
+
+<h3>Rocky Mountain National Park</h3>
+<ul>
+    <li>The high peaks and plains of the Rocky Mountains are still home to numerous indigenous people. You will find
+        reserves for the Bannock, Sioux, Blackfoot, Cow People, Apache, Kutenai, and many more.
+    </li>
+    <li>The highest peak in the Rocky Mountains is Mount Elbert. Mount Elbert is located in the state of Colorado and is
+        4401 meters high, or 14,440-feet.
+
+    </li>
+    <li>Did you know that all the rivers on the west side of the Rocky Mountains flow to the Pacific Ocean while all
+        the rivers on the east side of the Rocky Mountains flow into the Atlantic Ocean? This is because the Rocky
+        Mountains literally divide North America, earning them the name of the Continental Divide.
+    </li>
+    <li>The Rocky Mountains formed 80 million to 55 million years ago during the Laramide orogeny, in which a number of
+        plates began sliding underneath the North American plate. The angle of subduction was shallow, resulting in a
+        broad belt of mountains running down western North America.
+    </li>
+</ul>
+
+<h3>Carlsbad Caverns National Park</h3>
+<ul>
+    <li>The caves in Carlsbad Caverns are 56°F throughout the year, with high humidity.</li>
+    <li>The Big Room in Carlsbad Caverns, at 8.2 acres, is the largest accessible cave chamber in North America.</li>
+    <li>There are at least 17 species of bats found in the park. The most common are Brazilian (sometimes called
+        Mexican) free-tailed bats; they can be seen exiting Carlsbad Cavern each night.
+    </li>
+    <li>Lechuguilla Cave, made famous on the Planet Earth series, is located in Carlsbad Caverns National Park. It
+        cannot be accessed by the public, and entry is allowed only for special research purposes.
+    </li>
+</ul>
+
 
 <a href="https://www.outdoorproject.com/articles/59-fun-facts-about-our-national-parks"> source for facts!</a>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
 
-  $('#toggle').click(function () {
-    $('dd').toggleClass('invisible');
+    $('#toggle').click(function () {
+        $('dd').toggleClass('invisible');
 
-  });
+    });
 
-  $('dt').click(function () {
-    $(this).css('background-color', 'goldenrod');
-    /* $(this).addClass('.highlight');
-   $(this).toggleClass('highlight');*/
-  });
+    $('dt').click(function () {
+        $(this).css('background-color', 'goldenrod');
+        /* $(this).addClass('.highlight');
+       $(this).toggleClass('highlight');*/
+    });
+
+// We haven't accomplished highlighting the last li in each ul!! This only highlights the very last li in the last ul
+    $('#last-fact').click(function () {
+        $('ul li').parent().children().last().css('background-color', 'goldenrod');
+    });
+
+
 </script>
 </body>
 
