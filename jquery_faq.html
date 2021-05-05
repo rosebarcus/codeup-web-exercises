@@ -110,8 +110,19 @@
 
 // We haven't accomplished highlighting the last li in each ul!! This only highlights the very last li in the last ul
     $('#last-fact').click(function () {
-        $('ul li').parent().children().last().css('background-color', 'goldenrod');
+       /* $('ul li').next().parent().children().last().css('background-color', 'goldenrod');*/
+        $('ul').each(function(){
+            $(this).children().last().css('background', 'goldenrod');
+        });
     });
+
+        $('h3').click(function(){
+            $(this).next().children().css('font-weight', 'bold');
+        });
+        $('li').click(function(){
+            $(this).parent().children().first().css('color', 'blue');
+        })
+
 
 
 </script>

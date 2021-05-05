@@ -5,6 +5,11 @@
     padding: 20px;
 }
 
+body {
+    background-image: url('../img/New-Mexico-White-Sands-GettyImages-1026457358.jpeg');
+    background-size: auto;
+
+}
 .invisible {
     visibility: hidden;
 }
@@ -28,4 +33,13 @@ dd {
 
 h1, h3 {
     color: #6261b2;
+    background-color: #b4d455;
+    border-radius: 50px;
+}
+
+li {
+    color: #cbffcd;
+    background-color: #6261b2;
+    border-radius: 50px;
+
 }
