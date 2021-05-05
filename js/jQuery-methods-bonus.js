@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('button').click(function(){
+    $('#button-1').click(function(){
         var nextImage = $(this).parent().next().children().first();
         var nextImageSrc = nextImage.attr('src');
         var thisSrc = $(this).prev().attr('src');
