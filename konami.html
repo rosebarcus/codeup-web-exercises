@@ -7,30 +7,42 @@
 </head>
 <body>
 <h1 id="hidden">Can you make it past the wards?</h1>
-<img class="easter-egg" src="img/space.jpeg"  style="display: none" alt="An image of outerspace">
-<img class="easter-egg" src="img/Ninth_House_Icon.jpeg" style="display: none" alt="An image of the Ninth House icon">
+<div id="container">
+    <div class="row">
+        <div>
+            <img class="easter-egg-background" src="img/space.jpeg" style="display: none" alt="An image of outerspace">
+        </div>
+        <div id="easter-egg">
+            <img class="easter-egg" src="img/Ninth_House_Icon.jpeg" style="display: none"
+                 alt="An image of the Ninth House icon">
+        </div>
+    </div>
+</div>
+
+</body>
 <script src="js/jquery-2.2.4.js"></script>
 <script>
-  "use strict";
-//refactor this now that you understand how the array works!
-  $(document).keyup(function(event){
-      console.log(event.keyCode);
-  });
+    "use strict";
+    //refactor this now that you understand how the array works!
+    $(document).keyup(function (event) {
+        console.log(event.keyCode);
+    });
 
-  var input = [];
-  var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var input = [];
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
-  $(document).keyup(function(event) {
-      if(input.length < konamiCode.length) {
-          input.push(event.keyCode);
-          console.log(input);
-      } if(input.join(',') === konamiCode.join(',')) {
-          alert("You've gained 30 lives!");
-          $('.easter-egg').css('display', 'block');
+    $(document).keyup(function (event) {
+        if (input.length < konamiCode.length) {
+            input.push(event.keyCode);
+            console.log(input);
+        }
+        if (input.join(',') === konamiCode.join(',')) {
+            /*alert("You've gained 30 lives!");*/
+            $('.easter-egg').css('display', 'block');
+        }
 
-      }
-  });
 
+    });
 
 
 </script>
