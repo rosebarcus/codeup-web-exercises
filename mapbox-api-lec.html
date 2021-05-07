@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>MapBox Lec Follow-Along</title>
 
 
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+        .popup-font {
+            font-family: Chalkboard, sans-serif;
+        }
+    </style>
 
 </head>
 <body>
@@ -45,12 +51,13 @@
   // Instantiation of Popup object
 
   var popup = new mapboxgl.Popup()
-      .setLngLat(marker.lngLat())
-      .setHTML("<h1>Hello World!</h1>")
+      .setLngLat(marker.getLngLat([-98.4861, 29.4260]))
+      .setHTML("<h3>Hello World!</h3>")
       .setMaxWidth("300px")
       .addTo(map);
 
   marker.setPopup(popup);
+  popup.addClassName('popup-font');
 </script>
 </body>
 </html>

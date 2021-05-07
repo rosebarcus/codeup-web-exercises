@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Places to Eat in San Fran</title>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+<h1>Rose's Fave San Francisco Eateries</h1>
+<script src="js/keys.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<script src="js/jquery-2.2.4.js"></script>
+
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+  mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+  var map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-122.4194, 37.7749], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+  });
+
+  var marker = new mapboxgl.Marker({
+    color: 'blue',
+  })
+
+  .setLngLat([-122.42227973492066, 37.766062067438234])
+  .addTo(map);
+
+  map.setZoom(13);
+
+  var popup = new mapboxgl.Popup()
+  .setLngLat(marker.getLngLat())
+  .setHTML('<h4>The Pork Shop</h4>')
+  .addTo(map);
+
+  marker.setPopup(popup)
+
+
+  geocode("3122 16th St, San Francisco, CA 94103", MAPBOX_ACCESS_TOKEN).then(function (results) {
+    map.setCenter(results);
+    map.setZoom(13);
+    console.log(results);
+    marker.setLngLat({lng: results[0], lat: results[1]});
+    marker.addTo(map)
+  })
+</script>
+
+</body>
+</html>
