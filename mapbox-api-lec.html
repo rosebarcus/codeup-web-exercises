@@ -37,9 +37,20 @@
       .setLngLat([-98.4861, 29.4260])
       .setDraggable(true)
       .addTo(map);
+
   marker.on('dragend', function(){
-      alert('the market has been moved!')
+      alert(marker.getLngLat().toString())
   })
+
+  // Instantiation of Popup object
+
+  var popup = new mapboxgl.Popup()
+      .setLngLat(marker.lngLat())
+      .setHTML("<h1>Hello World!</h1>")
+      .setMaxWidth("300px")
+      .addTo(map);
+
+  marker.setPopup(popup);
 </script>
 </body>
 </html>
