@@ -2,13 +2,15 @@
 <html>
 <head>
     <title>Online Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ajax-store.css">
 </head>
 <body>
 
 <h1>My Tool Store</h1>
 
 <table id="products">
-    <thead>
+    <thead class="p-3 mb-2 bg-primary text-white" style="padding-left: auto;">
         <tr>
             <th>Title</th>
             <th>Quantity</th>
@@ -21,35 +23,38 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-<table>
     <button id="the-button">Refresh</button>
     <script>
-(function buildStuff() {
+function buildStuff() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
     $.ajax("data/inventory.json").done(function(products){
+        $("#insertProducts").html("");
         console.log(products);
         for (var i = 0; i < products.length; i++) {
-            var htmlStr = "<table id="products-" + (i + 1) + " ' class='products'>";
-            htmlStr += "<h3>" + products[i].title + "</h3>";
-            htmlStr += "<p>" + products[i].quantity.price + " " + products[i].categories + "</p>";
-            htmlStr += "</table>";
+            var htmlStr = "<tr id='products-" + (i + 1) + "' class='products'>";
+            htmlStr += "<td>" + products[i].title + "</td>";
+            htmlStr += "<td>" + products[i].quantity + "</td>";
+            htmlStr += "<td>" + products[i].price + "</td>";
+            htmlStr += "<td>" + products[i].categories + "</td>"
+            htmlStr += "</tr>";
                 $("#insertProducts").append(htmlStr);
         }
     });
+}
 
-    {
-        $("#the-button").click(buildStuff());
+
+        $("#the-button").click(buildStuff);
 
         buildStuff();
-    }
+
     // TODO: Take the data from inventory.json and append it to the products table
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
 
 
-})();
+
 </script>
 
 </body>
