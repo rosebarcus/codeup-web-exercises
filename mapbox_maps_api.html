@@ -23,7 +23,7 @@
     zoom: 9 // starting zoom
   });
 
-  var marker = new mapboxgl.Marker({
+  var markerPorkShop = new mapboxgl.Marker({
     color: 'blue',
   })
 
@@ -35,18 +35,17 @@
   var popup = new mapboxgl.Popup()
   .setLngLat(marker.getLngLat())
   .setHTML('<h4>The Pork Shop</h4>')
-  .addTo(map);
 
   marker.setPopup(popup)
-
 
   geocode("3122 16th St, San Francisco, CA 94103", MAPBOX_ACCESS_TOKEN).then(function (results) {
     map.setCenter(results);
     map.setZoom(13);
     console.log(results);
     marker.setLngLat({lng: results[0], lat: results[1]});
-    marker.addTo(map)
   })
+
+
 </script>
 
 </body>
