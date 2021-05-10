@@ -35,6 +35,7 @@
   var popup = new mapboxgl.Popup()
   .setLngLat(marker.getLngLat())
   .setHTML('<h4>The Pork Shop</h4>')
+  .addTo(map);
 
   marker.setPopup(popup)
 
