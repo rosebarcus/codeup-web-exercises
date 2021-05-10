@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project</title>
+</head>
+<body>
+<h1>Open the console!</h1>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/keys.js"></script>
+<script>
+    //plug in your coodinates with a variable, review the guide david put in slack
+    var coordinates = [37.8970, -122.5811];
+    $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0] +
+        "&lon=" + coordinates[1] + "&exclude=current, hourly, minutely&appid=" + WEATHER_ACESS_TOKEN).done(function(resp) {
+            console.log(resp);
+            var today = resp.daily[0];
+            var todayDate = new Date(today.dt * 1000);
+            console.log(todayDate);
+    });
+
+</script>
+</body>
+</html>
