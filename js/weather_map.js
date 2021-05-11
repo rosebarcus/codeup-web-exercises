@@ -38,6 +38,7 @@ var saCoordinates = [29.4241, -98.4936];
 function weather(x) {
     $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + x[0] +
         "&lon=" + x[1] + "&exclude=current, hourly, minutely&appID=" + WEATHER_ACCESS_TOKEN).done(function (resp) {
+            // HTML rendering:
             var weatherHTML = '';
             for(var i = 0; i <=4; i++) {
                /* console.log(resp);*/
