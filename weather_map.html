@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/weather_map.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+
 </head>
 <body>
 <div id="body">
@@ -14,7 +17,16 @@
         </div><div class="row"><div class="col" id="location"></div></div>
 
         <div id="weather-info" class="row d-flex justify-content-around"></div>
-
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoicm9zZWJhcmN1cyIsImEiOiJja29lZzdkMmUwN2E3Mm9vZHI3amFoNmY2In0.xPN1K_Q4DVlG4wOlhIZU0A';
+    var map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+    });
+</script>
 
 
 <script src="js/keys.js"></script>

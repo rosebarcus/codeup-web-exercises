@@ -1,5 +1,16 @@
 "use strict";
-// weather map
+
+// map API
+
+mapboxgl.accessToken = MAPBOX_ACCESS_TOKEN;
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    zoom: 10,
+    center: [-98.4936,29.4241]
+});
+
+// weather forecast API
 var coordinates = [37.8970, -122.5811];
 var saCoordinates = [29.4241, -98.4936];
 
@@ -16,7 +27,7 @@ function weather() {
                 weatherHTML += '<div class="list-group-item"><p>' + "Current Temperature: " + currentTemp + '</p></div>'
                 weatherHTML += '<div class="list-group-item"><p>' + "Description: " + resp.daily[i].weather[0].description + '</p></div>'
                 weatherHTML += '<div class="list-group-item"><p>' + '<img src=http://openweathermap.org/img/w/' + resp.daily[0].weather[0].icon + '.png></p></div>'
-                weatherHTML += '<div class="list-group-item"><p>' + "Humidity: " + resp.daily[i].humidity + '</p></div>'
+                weatherHTML += '<div class="list-group-item"><p>' + "Humidity %" + resp.daily[i].humidity + '</p></div>'
                 weatherHTML += '<div class="list-group-item"><p>' + "Wind Speed: " + resp.daily[i].wind_speed + '</p></div>'
                 weatherHTML += '<div class="list-group-item"><p>' + "Pressure: " + resp.daily[i].pressure + '</p></div>'
                 weatherHTML += '</div>'
