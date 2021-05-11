@@ -1,17 +1,30 @@
 "use strict";
 // weather map
 var coordinates = [37.8970, -122.5811];
+var saCoordinates = [29.4241, -98.4936];
 
 function weather() {
-    $('.forecast').html(' ');
-    $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + coordinates[0] +
-        "&lon=" + coordinates[1] + "&exclude=current, hourly, minutely&appID=" + WEATHER_ACCESS_TOKEN).done(function (resp) {
-        console.log(resp);
-        var currentTemp = resp.daily[0].temp.day.toFixed(0);
-        console.log(currentTemp);
-        $(currentTemp).html('Current Temperature');
-        var todayDate = new Date(resp.daily[0].dt * 1000).toDateString();
-        console.log(todayDate);
+    $.ajax("https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=" + saCoordinates[0] +
+        "&lon=" + saCoordinates[1] + "&exclude=current, hourly, minutely&appID=" + WEATHER_ACCESS_TOKEN).done(function (resp) {
+            var weatherHTML = '';
+            for(var i = 0; i <=4; i++) {
+                console.log(resp);
+                var todayDate = new Date(resp.daily[i].dt * 1000).toDateString();
+                console.log(todayDate);
+                var currentTemp = resp.daily[i].temp.day.toFixed(0);
+                weatherHTML += '<div class="col-2 card-header" style="width: 18em;">' + todayDate
+                weatherHTML += '<div class="list-group-item"><p>' + "Current Temperature: " + currentTemp + '</p></div>'
+                weatherHTML += '<div class="list-group-item"><p>' + "Description: " + resp.daily[i].weather[0].description + '</p></div>'
+                weatherHTML += '<div class="list-group-item"><p>' + '<img src=http://openweathermap.org/img/w/' + resp.daily[0].weather[0].icon + '.png></p></div>'
+                weatherHTML += '<div class="list-group-item"><p>' + "Humidity: " + resp.daily[i].humidity + '</p></div>'
+                weatherHTML += '<div class="list-group-item"><p>' + "Wind Speed: " + resp.daily[i].wind_speed + '</p></div>'
+                weatherHTML += '<div class="list-group-item"><p>' + "Pressure: " + resp.daily[i].pressure + '</p></div>'
+                weatherHTML += '</div>'
+                weatherHTML += '</div>'
+
+            }
+$('#weather-info').append(weatherHTML);
+        console.log(weatherHTML);
     })
 
 }

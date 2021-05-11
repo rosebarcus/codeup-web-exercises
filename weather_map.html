@@ -9,50 +9,25 @@
 </head>
 <body>
 <div id="body">
-    <div class="container">
-        <div class="row">
+
             <div class="col"><h2>Weather Map</h2></div>
         </div><div class="row"><div class="col" id="location"></div></div>
 
-        <div class="row">
-            <div class="col">
-                <div class="row"><div id="temperature" class="col"></div></div>
-                <div class="row"><div id="icon" class="col"></div></div>
-                <div class="row"><div id="summary" class="col"></div></div>
-                <div class="row"><div id="humidity" class="col"></div></div>
-                <div class="row"><div id="windSpeed" class="col"></div></div>
-                <div class="row"><div id="pressure" class="col"></div></div>
-            </div>
+        <div id="weather-info" class="row d-flex justify-content-around"></div>
 
-            <div class="col">
-                <div class="row"><div id="temperature1" class="col"></div></div>
-                <div class="row"><div id="icon1" class="col"></div></div>
-                <div class="row"><div id="summary1" class="col"></div></div>
-                <div class="row"><div id="humidity1" class="col"></div></div>
-                <div class="row"><div id="windSpeed1" class="col"></div></div>
-                <div class="row"><div id="pressure1" class="col"></div></div>
-            </div>
-
-            <div class="col">
-                <div class="row"><div id="temperature2" class="col"></div></div>
-                <div class="row"><div id="icon2" class="col"></div></div>
-                <div class="row"><div id="summary2" class="col"></div></div>
-                <div class="row"><div id="humidity2" class="col"></div></div>
-                <div class="row"><div id="windSpeed2" class="col"></div></div>
-                <div class="row"><div id="pressure2" class="col"></div></div>
-            </div>
-
-    </div>
-</div>
 
 
 <script src="js/keys.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+
     <script src="js/weather_map.js"></script>
 </body>
 </html>
