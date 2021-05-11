@@ -25,9 +25,13 @@ marker.on('dragend', function(){
     console.log(updateCoordinates);
     $('#weather-info').empty();
     weather(updateCoordinates);
-    marker.setPopup();
 })
-
+//TODO Finish text input that updates location based on user search
+/*function search () {
+    $('#search').click(function(){
+        var userInput = $('#location').val()
+    })
+}*/
 // weather forecast API
 
 var coordinates = [37.8970, -122.5811];
