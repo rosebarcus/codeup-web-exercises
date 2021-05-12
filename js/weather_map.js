@@ -42,6 +42,10 @@ marker.on('dragend', function(){
             marker.setLngLat(userCoordinates);
             weather([searchLng, searchLat]);
 
+            map.flyTo({
+                center:[coordinates[0], coordinates[1]]
+            })
+
 
         });
 
