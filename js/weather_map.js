@@ -26,15 +26,28 @@ marker.on('dragend', function(){
     $('#weather-info').empty();
     weather(updateCoordinates);
 })
-//TODO Finish text input that updates location based on user search
-/*function search () {
-    $('#search').click(function(){
-        var userInput = $('#location').val()
+//TODO refactor to use this functionality after a button click
+// search functionality
+    $('#button').click(function(e){
+        //the below is the same as console.log(e.target.value);
+        var userInput = $('#userInput').val()
+        console.log(userInput);
+        var searchLocation = geocode(userInput, MAPBOX_ACCESS_TOKEN);
+        searchLocation.then(function(coordinates){
+            var searchLat = coordinates[1];
+            var searchLng = coordinates[0];
+            var userCoordinates = [searchLat, searchLng];
+            console.log(userCoordinates);
+            $('#weather-info').empty();
+            weather(userCoordinates);
+
+        });
+
     })
-}*/
+
 // weather forecast API
 
-var coordinates = [37.8970, -122.5811];
+
 var saCoordinates = [29.4241, -98.4936];
 /* Your weather function is expecting an array to be passed as an argument because in the ajax call you have x set
  to both index of 0 and 1 to pull the coordinates from the marker drag end function
@@ -67,3 +80,16 @@ $('#weather-info').append(weatherHTML);
 }
 
 weather(saCoordinates);
+
+function geocode(search, token) {
+    var baseUrl = 'https://api.mapbox.com';
+    var endPoint = '/geocoding/v5/mapbox.places/';
+    return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+        .then(function(res) {
+            return res.json();
+            // to get all the data from the request, comment out the following three lines...
+        }).then(function(data) {
+            return data.features[0].center;
+        });
+}
+var dallasLocation = geocode("dallas", MAPBOX_ACCESS_TOKEN)
