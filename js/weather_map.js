@@ -26,24 +26,27 @@ marker.on('dragend', function(){
     $('#weather-info').empty();
     weather(updateCoordinates);
 })
-//TODO refactor to use this functionality after a button click
-// search functionality
+//search function
     $('#button').click(function(e){
         //the below is the same as console.log(e.target.value);
         var userInput = $('#userInput').val()
         console.log(userInput);
         var searchLocation = geocode(userInput, MAPBOX_ACCESS_TOKEN);
         searchLocation.then(function(coordinates){
-            var searchLat = coordinates[1];
-            var searchLng = coordinates[0];
+            console.log(coordinates)
+            var searchLat = coordinates[0];
+            var searchLng = coordinates[1];
             var userCoordinates = [searchLat, searchLng];
             console.log(userCoordinates);
             $('#weather-info').empty();
-            weather(userCoordinates);
+            marker.setLngLat(userCoordinates);
+            weather([searchLng, searchLat]);
+
 
         });
 
     })
+
 
 // weather forecast API
 
