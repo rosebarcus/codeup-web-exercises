@@ -1,21 +1,50 @@
+* {
+    @font-face {
+        font-family: 'Helvetica', sans-serif;
 
+    }
+}
     body {
-        background-color: #6261b2;
+        background-image: url('../img/pastel-background1.jpeg');
+        background-position: center;
+        background-size: cover;
+
     }
 
     h2 {
         text-align: center;
         color: #cbffcd;
     }
+    .col-2 {
+        color: white;
+        text-align: center;
+        padding-bottom: .5em;
+        font-size: large;
+    }
+    .list-group-item {
+        background-color: #0fb784;
+        text-align: center;
+        align-content: space-between;
+        border-radius: 30px;
+        margin: auto;
+        padding: auto;
+    }
     #weather-info {
-        background-color: #6261b2;
+        display: flex;
+        background-image: url("");
+        background-size: cover;
+        border-radius: 15px;
 
         margin: auto;
         padding: .5em;
     }
 
-    map {
+    #map {
         display: flex;
-        margin: auto;
+        justify-content: center;
     }
 
+#userInput {
+    display: flex;
+   justify-content: center;
+}
