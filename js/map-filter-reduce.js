@@ -1,5 +1,5 @@
 "use strict";
-console.log("Hello, why isn't my js working?")
+
 const users = [
     {
         id: 1,
@@ -45,3 +45,10 @@ let emails = users.map(function (user){
 console.log(emails);
 
 let es6emails = users.map(user => user.email);
+
+// the below filter function returns only users that have 3 or more languages in their arrays.
+
+let trilinguals = users.filter(function (user){
+    return user.languages.length >= 3;
+});
+
