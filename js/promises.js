@@ -1,11 +1,17 @@
 "use strict";
 
-function githubUserLastCommit (username){
-    fetch (${https://api.github.com/users/tater/events}, {
+const gitIt = fetch ('https://api.github.com/users/rosebarcus/events', {
         headers:
-            {'Authorization': GITHUB_ACCESS_TOKEN}})
+            {'Authorization': GITHUB_ACCESS_TOKEN}
 
-}
+    }).then(function (data){
+    console.log(data)
+    return data.json()
+}).then(function (data){
+    console.log(data)
+})
+
+
 
 console.log(githubUserLastCommit());
 
