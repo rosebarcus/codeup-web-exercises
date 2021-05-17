@@ -105,3 +105,16 @@ let namesNicelyJoined = users.reduce(function (accumulator, user, index, usersAr
 }, []);
 
 console.log(namesNicelyJoined);
+
+//this is the bonus and todo: finish so that this unique array returns the languages from the users array.
+
+let uniqueArray = users.reduce(function (nameArray, user, index, array){
+if (index === array.length - 1) {
+    // return getUniqueValues(nameArray);
+    return [... new Set(nameArray)].sort(); // Set creates a new array with the unique values
+} else {
+    return nameArray;
+    // return getUniqueValues(nameArray);
+}
+}, []);
+console.log(uniqueArray);
