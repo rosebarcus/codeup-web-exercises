@@ -8,10 +8,7 @@ const gitIt = fetch ('https://api.github.com/users/rosebarcus/events', {
     console.log(data)
     return data.json()
 }).then(function (data){
-    console.log(data)
+    console.log(data);
 })
 
-
-
-console.log(githubUserLastCommit());
 
