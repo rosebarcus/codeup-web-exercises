@@ -41,12 +41,12 @@ let postOptions = {
 /*fetch("https://lunar-spice-chocolate.glitch.me/books", postOptions)
     .then(resp => resp.json())
     .then(book => console.log(book));*/
-let deleteOptions = {
+/*let deleteOptions = {
     method: 'DELETE',
     headers: {
         'Content-Type': 'application/json',
     }
-}
+}*/
 $("#addPercy").click(() => {
 fetch("https://lunar-spice-chocolate.glitch.me/books/", postOptions)
     .then(getBooks);
@@ -89,5 +89,16 @@ let patchOptions = {
 
 fetch("https://lunar-spice-chocolate.glitch.me/books/6", patchOptions).then(getBooks);
 
-
 getBooks();
+
+//DELETE
+let deleteOptions = {
+    method: 'DELETE',
+    headers: {
+        'Content-Type': 'application/json',
+    }
+}
+$("#uniqueBooks").click(() => {
+    let inputVal = $("#id-to-delete").val();
+    fetch(`https://lunar-spice-chocolate.glitch.me/books/${inputVal}`, deleteOptions).then(getBooks)
+    })
