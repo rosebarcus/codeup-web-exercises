@@ -1,7 +1,7 @@
 "use strict";
 
 let getOptions = {
-    method: 'POST',
+    method: 'GET',
     headers: {
         'Content-Type': 'application/json',
     }
@@ -47,9 +47,21 @@ let postOptions = {
         'Content-Type': 'application/json',
     }
 }*/
+
 $("#addPercy").click(() => {
-fetch("https://lunar-spice-chocolate.glitch.me/books/", postOptions)
-    .then(getBooks);
+fetch("https://lunar-spice-chocolate.glitch.me/books/")
+    .then(resp => resp.json())
+    .then(books =>{
+        for (let book of books) {
+            if (book.title !== newBook.title || book.author.firstName !== newBook.author.firstName || book.author.lastName !== newBook.author.lastName) {
+                fetch("https://lunar-spice-chocolate.glitch.me/books/", postOptions)
+                    .then(getBooks);
+            } else {
+                alert("Hey, that book already exists!");
+                break;
+            }
+        }
+    })
 });
 
 //PUT
@@ -97,8 +109,10 @@ let deleteOptions = {
     headers: {
         'Content-Type': 'application/json',
     }
-}
+};
+
 $("#uniqueBooks").click(() => {
     let inputVal = $("#id-to-delete").val();
-    fetch(`https://lunar-spice-chocolate.glitch.me/books/${inputVal}`, deleteOptions).then(getBooks)
+    fetch(`https://lunar-spice-chocolate.glitch.me/books/${inputVal}`, deleteOptions)
+        .then(getBooks)
     })
