@@ -50,3 +50,13 @@ fizzBuzz(30);*/
 const returnSeven = () => 7;
 
 console.log(returnSeven());
+
+function multipliedByFive (num) {
+    if (typeof num === "number")
+        return num * 5
+} else {
+    return 0;
+
+    }
+
+    // David's solution const mutiplyByFive = num => typeof num === "number" ? num * 5 :0;
