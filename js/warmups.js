@@ -41,3 +41,12 @@ fizzBuzz(30);*/
 
     fizzBuzz(30);
 })();
+
+/*function returnsSeven (num) {
+    if (num === 7);
+    return "lucky number " + num;
+} */
+//david's solution:
+const returnSeven = () => 7;
+
+console.log(returnSeven());
