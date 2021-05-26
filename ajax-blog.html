@@ -10,12 +10,13 @@
   "use strict";
   $.ajax("data/blog.json").done(function (posts){
     for (var i = 0; i < posts.length; i++) {
-      var category = posts[i].categories;
-      var spaceCats = category.join(", ");
-      var postsStr = "<div id='post-" + (i + 1) + " '>";
-      postsStr += ""
+      var htmlStr = "<div id='post'-" + (i + 1) + ">";
+      htmlStr += "<div><h1>" + posts[i].title + "</h1></div>";
+      htmlStr += "<p>" + posts[i].content + "</p>";
+      htmlStr += "</div>";
+     $("#posts").append(htmlStr);
     }
-  })
+  });
 
 </script>
 <script src="js/jquery-2.2.4.js"></script>
