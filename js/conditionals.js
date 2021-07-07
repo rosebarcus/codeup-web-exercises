@@ -199,15 +199,16 @@ function plus100 (numberEntry){
     return "Your number is " + (parseFloat(numberEntry) + 100) + " if we added 100.";
 }
 
-if (participate){
+if (!participate) {
+} else {
     numberEntry = prompt("Please enter a number.");
-    if(isNan(numberEntry)){
+    if (isNan(numberEntry)) {
         alert("Sorry, that is not a number.");
     } else {
         alert(isOddOfEven(numberEntry));
         alert(isNegativeOrPositive(numberEntry));
         alert(plus100(numberEntry));
-    } else {
         return alert("Okay, bye.");
     }
+
 }
