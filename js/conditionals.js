@@ -208,7 +208,9 @@ if (!participate) {
         alert(isOddOfEven(numberEntry));
         alert(isNegativeOrPositive(numberEntry));
         alert(plus100(numberEntry));
-        return alert("Okay, bye.");
+
+    } else if {
+        alert("Okay, bye.");
     }
 
 }
