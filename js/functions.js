@@ -98,7 +98,7 @@ var tipAmount = calculateTip(tipPercentage, bill);
 var total = bill +tipAmount;
 alert("Your bill came out to $" + bill.toFixed(2) + ". You decided to tip a generous" + (tipPercentage * 100) + "%," +
     " which will result in the $" + tipAmount.toFixed(2) + "to be added to your final total for the evening, your" +
-    " cheque is $" + total.toFixed(2) + ".)";
+    " cheque is $" + total.toFixed(2) + ".)")
 
 function applyDiscount(originalPrice, markDownPercentage) {
     var priceAfterDiscount = originalPrice - (originalPrice * markDownPercentage);
